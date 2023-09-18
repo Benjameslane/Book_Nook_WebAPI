@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "4ee21638-ebd9-4f53-a9ab-17cbef4ba1ee",
+		"name": "ASP_NET_BookNook_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28448749"
+	},
+	"item": [
+		{
+			"name": "Post Review",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImJlbiIsImVtYWlsIjoiYmVuQGJlbi5iZW4iLCJpZCI6ImZjNWM5ZTYxLWQzY2QtNDg1MC04MGE4LWE3MTkwZWNlMDk0ZiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE2OTUxMzM2NTksImlzcyI6IkZ1bGxTdGFja0F1dGhfV2ViQVBJIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMSJ9.PD2wX6jmxDfKJXkF4OKvw_p9jxJooOcqpwpXVpqzvOk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"BookId\": \"1\",\r\n    \"Text\": \"Great Book\",\r\n    \"Rating\": 4.5\r\n    \r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/reviews",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Favorites",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImJlbiIsImVtYWlsIjoiYmVuQGJlbi5iZW4iLCJpZCI6ImZjNWM5ZTYxLWQzY2QtNDg1MC04MGE4LWE3MTkwZWNlMDk0ZiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE2OTUxMzkzOTcsImlzcyI6IkZ1bGxTdGFja0F1dGhfV2ViQVBJIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMSJ9.j20osrwglK0RMewTQkXo2P45eXcQkhJbZTlcfMHaxSc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/favorites/myFavorites",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"favorites",
+						"myFavorites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Favorites",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImJlbiIsImVtYWlsIjoiYmVuQGJlbi5iZW4iLCJpZCI6ImZjNWM5ZTYxLWQzY2QtNDg1MC04MGE4LWE3MTkwZWNlMDk0ZiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE2OTUxMzkzOTcsImlzcyI6IkZ1bGxTdGFja0F1dGhfV2ViQVBJIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMSJ9.j20osrwglK0RMewTQkXo2P45eXcQkhJbZTlcfMHaxSc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\": \"The Alchemist\",\r\n    \"BookId\": \"1\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/favorites",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"favorites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/bookdetails/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"bookdetails",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
