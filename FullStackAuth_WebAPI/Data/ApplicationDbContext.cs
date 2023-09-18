@@ -8,6 +8,12 @@ namespace FullStackAuth_WebAPI.Data
     public class ApplicationDbContext : IdentityDbContext<User>
     {
         public DbSet<Car> Cars { get; set; }
+       
+        public DbSet<Review> Reviews { get;  set; }
+
+        public DbSet<Favorite> Favorites { get; set; }
+     
+        
 
         public ApplicationDbContext(DbContextOptions options)
     : base(options)
@@ -21,5 +27,6 @@ namespace FullStackAuth_WebAPI.Data
 
             modelBuilder.ApplyConfiguration(new RolesConfiguration());
         }
+        }
     }
-}
+
